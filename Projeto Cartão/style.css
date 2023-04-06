@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    font-family: 'Roboto Slab', serif;
+}
+
+.left-side {
+    background-image: url("images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 642.52px !important;
+    height: 100vh;
+}
+
+.card-front {
+    background-image: url("images/bg-card-front.png");
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    width: 447px;
+    height: 246px;
+    position: relative;
+    top: 186px;
+    left: 163px;
+}
+
+.card-back {
+    background-image: url("images/bg-card-back.png");
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    width: 447px;
+    height: 246px;
+    position: relative;
+    top: 250px;
+    left: 250px;
+}
+
+.right-side {
+    width: 1277.4px !important;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: #220930;
+}
+
+label {
+    font-size: 14px;
+}
+
+input {
+    width: 380px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #aaaaaa;
+    margin: 10px 0px 30px 0px;
+}
+
+input::placeholder {
+    color: #aaaaaa;
+    font-family: 'Roboto Slab', serif;
+}
+
+.data-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label1 input {
+    width: 80px;
+}
+
+.label2 input {
+    width: 150px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #220930;
+    color: white;
+    border: 0;
+    padding: 15px;
+    transition: all 1s;
+}
+
+input[type="submit"]:hover {
+    background-color: #797979;
+    cursor: pointer;
+}
