@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +9,18 @@
 </head>
 <body>
     <div class="left-side">
-        <div class="card-front"></div>
-        <div class="card-back"></div>
+        <div class="card-front">
+            <div class="datas">
+                <div class="cardnumber">0000 0000 0000 0000</div>
+                <div class="name-date">
+                    <div class="cardname">Jane Appleseed</div>
+                    <div class="date">00/00</div>
+                </div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="cvc">000</div>
+        </div>
     </div>
     <div class="right-side">
         <form action="">
@@ -19,22 +29,23 @@
             </label>
 
             <label for="number">CARD NUMBER
-                <input type="text" name="number" id="number" placeholder="Ex: 1234 5678 9123 0000">
+                <input class="insert-cardnumber" oninput="adicionar()" type="text" name="number" id="number" maxlength="16" placeholder="Ex: 1234 5678 9123 0000">
             </label>
 
             <div class="data-group">
-                <label class="label1">EXP. DATE (MM/YY)
-                    <input type="text" name="month" id="month" placeholder="MM">
-                    <input type="text" name="year" id="year" placeholder="YY">
+                <label class="label1">EXP. DATE (MM/YY) <br>
+                    <input type="number" name="month" id="month" maxlength="2" max="12" placeholder="MM">
+                    <input type="number" name="year" id="year" maxlength="2" placeholder="YY">
                 </label>
                 
-                <label class="label2">CVC
-                    <input type="text" name="cvc" id="cvc" placeholder="Ex: 123">
+                <label class="label2">CVC <br>
+                    <input type="number" name="cvc" id="cvc" maxlength="3" placeholder="Ex: 123">
                 </label>
             </div>
 
             <input type="submit" value="Confirm">
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
