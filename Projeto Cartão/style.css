@@ -209,6 +209,7 @@ input[type="submit"]:hover {
     .card-front {
         width: 300px;
         height: 190px;
+        left: 70px;
     }
 
     .datas {
@@ -230,16 +231,23 @@ input[type="submit"]:hover {
     .card-back {
         width: 300px;
         height: 190px;
-
-        left: -75px;
     }
 
     .cvc {
-        /* width: 447px;
-        display: flex;
-        justify-content: end; */
         margin: 0px 60px -50px 350px;
         
+    }
+}
+
+@media (max-width: 485px) {
+    .card-front {
+        width: 235px;
+        height: 150px;
+    }
+
+    .card-back {
+        width: 235px;
+        height: 150px;
     }
 }
 
