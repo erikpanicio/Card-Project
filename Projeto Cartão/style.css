@@ -51,8 +51,10 @@ body {
 }
 
 .cardnumber {
-    font-size: 37.45px;
+    font-size: 35px;
     color: white;
+    text-align: left;
+    padding: 0px 40px;
 }
 
 .name-date {
@@ -240,3 +242,5 @@ input[type="submit"]:hover {
         
     }
 }
+
+/* letter-spacing */

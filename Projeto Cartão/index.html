@@ -25,21 +25,21 @@
     <div class="right-side">
         <form action="">
             <label>CARDHOLDER NAME
-                <input type="text" name="name" id="name" placeholder="Ex: Jane Appleseed">
+                <input class="insert-cardname" oninput="adicionar1()" type="text" name="name" id="name" placeholder="Ex: Jane Appleseed">
             </label>
 
             <label for="number">CARD NUMBER
-                <input class="insert-cardnumber" oninput="adicionar()" type="text" name="number" id="number" maxlength="16" placeholder="Ex: 1234 5678 9123 0000">
+                <input class="insert-cardnumber" oninput="adicionar2()" type="text" name="number" id="number" maxlength="16" pattern="\d{4}.\d{4}" placeholder="Ex: 1234 5678 9123 0000">
             </label>
 
             <div class="data-group">
                 <label class="label1">EXP. DATE (MM/YY) <br>
-                    <input type="number" name="month" id="month" maxlength="2" max="12" placeholder="MM">
-                    <input type="number" name="year" id="year" maxlength="2" placeholder="YY">
+                    <input class="insert-month" oninput="adicionar3()" type="number" name="month" id="month" max="12" placeholder="MM">
+                    <input class="insert-year" oninput="adicionar3()" type="number" name="year" id="year" max="25" placeholder="YY">
                 </label>
                 
                 <label class="label2">CVC <br>
-                    <input type="number" name="cvc" id="cvc" maxlength="3" placeholder="Ex: 123">
+                    <input class="insert-cvc" oninput="adicionar4()" type="text" name="cvc" id="cvc" maxlength="3" minlength="3" placeholder="Ex: 123">
                 </label>
             </div>
 
