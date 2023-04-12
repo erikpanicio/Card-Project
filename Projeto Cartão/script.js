@@ -25,7 +25,7 @@ text_cardnumber = text_cardnumber.replace(/\s/g,'')
 vetor_cardnumber = []
 
 for(var i=0; i<text_cardnumber.length; i++){
-    console.log(vetor_cardnumber.push(text_cardnumber[i]))
+    /* console.log(vetor_cardnumber.push(text_cardnumber[i])) */
 }
 
 function adicionar2() {
@@ -60,7 +60,7 @@ function adicionar3() {
     }
 
     div_date.innerHTML = `${insert_month}/${insert_year}`
-    alert(typeof(insert_month))
+    /* alert(typeof(insert_month)) */
 }
 
 var ano_limite = (new Date().getFullYear()) + 5
