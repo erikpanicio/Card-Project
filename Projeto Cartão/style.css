@@ -30,7 +30,7 @@ body {
 .card-front {
     background-image: url("images/bg-card-front.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     border-radius: 10px;
     width: 447px;
     height: 246px;
@@ -46,22 +46,27 @@ body {
 }
 
 .datas {
-    width: 447px;
+    width: 100%;
     padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cardnumber {
     font-size: 35px;
     color: white;
     text-align: left;
-    padding: 0px 40px;
+    width: 80%;
+    /* padding: 0px 40px; */
 }
 
 .name-date {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    padding: 0px 40px;
+    width: 80%;
+    /* padding: 0px 40px; */
 }
 
 .cardname {
@@ -79,19 +84,27 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 10px;
+    /* padding-bottom: 10px; */
     width: 447px;
     height: 246px;
     position: relative;
     top: 250px;
     left: 250px;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     color: white;
 }
 
 .cvc {
-    margin: 0px 60px 10px 0px;
+    /* margin: 0px 60px 10px 0px; */
+    transform: translate(0, -13%);
+    width: 77%;
+    height: 4vh;
+    text-align: right;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .right-side {
@@ -204,16 +217,14 @@ input[type="submit"]:hover {
         top: 165px;
     }
 
-    .datas {
-        width: 300px;
-    }
-
     .cardnumber {
+        width: 90%;
         font-size: 27px;
     }
 
     .name-date {
-        padding: 0px 20px;
+       /*  padding: 0px 20px; */
+       width: 90%;
     }
     
     .cardname {
@@ -234,15 +245,20 @@ input[type="submit"]:hover {
     }
 
     .card-front {
-        width: 286px;
-        height: 157px;
+        width: 305px;
+        height: 177px;
         top: 110px;
     }
 
     .card-back {
-        width: 286px;
-        height: 157px;
+        width: 305px;
+        height: 177px;
         top: 21px;
+    }
+
+    .cvc {
+        transform: translate(0, -27%);
+        height: 3vh;
     }
 
     form {
@@ -251,6 +267,26 @@ input[type="submit"]:hover {
 
     .data-group {
         flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-front {
+        width: 250px;
+        height: 150px;
+        transform: translate(-50%);
+        top: 150px;
+    }
+
+    .cardnumber {
+        font-size: 22px;
+    }
+
+    .card-back {
+        width: 250px;
+        height: 150px;
+        transform: translate(-50%);
+        top: 50px;
     }
 }
 
