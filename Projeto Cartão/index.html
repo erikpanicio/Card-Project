@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Card</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,23 +23,23 @@
         </div>
     </div>
     <div class="right-side">
-        <form action="">
+        <form action="" method="GET">
             <label>CARDHOLDER NAME
-                <input class="insert-cardname" oninput="adicionar1()" type="text" name="name" id="name" placeholder="Ex: Jane Appleseed">
+                <input class="insert-cardname" oninput="adicionar1()" type="text" name="name" id="name" maxlength="30" required placeholder="Ex: Jane Appleseed">
             </label>
 
             <label for="number">CARD NUMBER
-                <input class="insert-cardnumber" oninput="adicionar2()" type="text" name="number" id="number" maxlength="16" pattern="\d{4}.\d{4}" placeholder="Ex: 1234 5678 9123 0000">
+                <input class="insert-cardnumber" oninput="adicionar2()" type="text" name="number" id="number" value="" maxlength="16" required pattern="\d{4}.\d{4}" placeholder="Ex: 1234 5678 9123 0000">
             </label>
 
             <div class="data-group">
                 <label class="label1">EXP. DATE (MM/YY) <br>
-                    <input class="insert-month" oninput="adicionar3()" type="number" name="month" id="month" max="12" placeholder="MM">
-                    <input class="insert-year" oninput="adicionar3()" type="number" name="year" id="year" max="25" placeholder="YY">
+                    <input class="insert-month" oninput="adicionar3()" type="number" name="month" id="month" min="0" max="12" required placeholder="MM">
+                    <input class="insert-year" oninput="adicionar3()" type="number" name="year" id="year" min="0" max="25" required placeholder="YY">
                 </label>
                 
                 <label class="label2">CVC <br>
-                    <input class="insert-cvc" oninput="adicionar4()" type="text" name="cvc" id="cvc" maxlength="3" minlength="3" placeholder="Ex: 123">
+                    <input class="insert-cvc" oninput="adicionar4()" type="text" name="cvc" id="cvc" maxlength="3" minlength="3" required placeholder="Ex: 123">
                 </label>
             </div>
 

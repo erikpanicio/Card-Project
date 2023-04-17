@@ -19,28 +19,20 @@ function adicionar1() {
 
 
 var div_cardnumber = document.querySelector(".cardnumber")
-var text_cardnumber = document.querySelector(".cardnumber").innerText
-text_cardnumber = text_cardnumber.replace(/\s/g,'')
-
-vetor_cardnumber = []
-
-for(var i=0; i<text_cardnumber.length; i++){
-    /* console.log(vetor_cardnumber.push(text_cardnumber[i])) */
-}
 
 function adicionar2() {
-    var insert_cardnumber = document.querySelector("input.insert-cardnumber").value
-   /*  alert(insert_cardnumber) */
+    var inputCardnumber = document.querySelector("input.insert-cardnumber")
+    inputCardnumberValue = inputCardnumber.value
 
-    for(var i=0; i<insert_cardnumber.length; i++){
-        vetor_cardnumber[i] = insert_cardnumber[i]
+    /* if(inputCardnumberValue.length == 5 || inputCardnumberValue.length == 10 || inputCardnumberValue.length == 15) {
+        inputCardnumberValue += 55
+        alert(inputCardnumber)
+    } */
 
-        div_cardnumber.innerHTML = vetor_cardnumber.join("")
-    }
+    div_cardnumber.innerHTML = inputCardnumberValue
 }
 
-
-
+/* ele volta automático para o valor padrão mas a lista está atualizando para mostrar naada já que nela não tem nada */
 
 
 
@@ -60,12 +52,11 @@ function adicionar3() {
     }
 
     div_date.innerHTML = `${insert_month}/${insert_year}`
-    /* alert(typeof(insert_month)) */
 }
 
-var ano_limite = (new Date().getFullYear()) + 5
+var ano_limite = ((new Date().getFullYear()) + 5) - 2000
 var insert_year = document.querySelector("input.insert-year")
-insert_year.max = ano_limite /* arrumar */
+insert_year.max = ano_limite
 
 
 var div_cvc = document.querySelector(".cvc")
