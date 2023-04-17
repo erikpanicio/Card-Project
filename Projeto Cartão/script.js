@@ -18,18 +18,18 @@ function adicionar1() {
 
 
 
-var div_cardnumber = document.querySelector(".cardnumber")
+var divCardnumber = document.querySelector(".cardnumber")
 
 function adicionar2() {
     var inputCardnumber = document.querySelector("input.insert-cardnumber")
-    inputCardnumberValue = inputCardnumber.value
+    inputCardnumberValue = inputCardnumber.value /* números digitados no input */
+    inputCardnumberLength = inputCardnumberValue.length
 
-    /* if(inputCardnumberValue.length == 5 || inputCardnumberValue.length == 10 || inputCardnumberValue.length == 15) {
-        inputCardnumberValue += 55
-        alert(inputCardnumber)
-    } */
+    if(inputCardnumberLength === 4 || inputCardnumberLength === 9 || inputCardnumberLength === 14) { /* automatizar */
+        inputCardnumber.value += " " /* value do input do html */
+    }
 
-    div_cardnumber.innerHTML = inputCardnumberValue
+    divCardnumber.innerHTML = inputCardnumberValue
 }
 
 /* ele volta automático para o valor padrão mas a lista está atualizando para mostrar naada já que nela não tem nada */
