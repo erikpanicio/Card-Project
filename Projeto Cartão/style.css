@@ -118,6 +118,7 @@ body {
 }
 
 form {
+    /* display: none !important; */
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -145,29 +146,58 @@ input::placeholder {
 
 .data-group {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+}
+
+.label1 {
+    width: 100%;
 }
 
 .label1 input {
-    width: 115px;
+    width: 45%;
+}
+
+.label2 {
+    width: 100%;
 }
 
 .label2 input {
-    width: 150px;
+    width: 100%;
 }
 
-input[type="submit"] {
+.button {
     width: 100%;
     background-color: #220930;
     color: white;
+    font-size: 18px;
     border: 0;
     padding: 15px;
+    border-radius: 10px;
     transition: all 1s;
+
+    margin: 10px 0px 30px 0px;
 }
 
-input[type="submit"]:hover {
+.button:hover {
     background-color: #797979;
     cursor: pointer;
+}
+
+.complete {
+    width: 400px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.complete-text1 {
+    color: #220930;   
+    font-size: 30px;
+}
+
+.complete-text2 {
+    color: #9e9e9e;
 }
 
 @media (max-width: 1400px) {
@@ -294,3 +324,4 @@ input[type="submit"]:hover {
 }
 
 /* letter-spacing */
+/* tirar o flex dos input e adicionar grid */

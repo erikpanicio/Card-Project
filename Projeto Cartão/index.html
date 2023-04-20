@@ -24,27 +24,37 @@
     </div>
     <div class="right-side">
         <form action="" method="GET">
-            <label>CARDHOLDER NAME
+            <label>
+                <div class="name">CARDHOLDER NAME</div>
                 <input class="insert-cardname" oninput="adicionar1()" type="text" name="name" id="name" minlength="3" maxlength="30" pattern="[a-zA-Z ]*" required placeholder="Ex: Jane Appleseed"> <!-- o pattern possibilita a entrada de dados de a-z A-Z e espaços, o * possibilita escrever quantos caracteres quiser -->
             </label>
 
-            <label for="number">CARD NUMBER
+            <label for="number">
+                <div class="name">CARD NUMBER</div>
                 <input class="insert-cardnumber" oninput="adicionar2()" type="text" name="number" id="number" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}" required placeholder="Ex: 1234 5678 9123 0000"> <!-- o pattern permite apenas o seguinte padrão: quatro caracteres seguido de um espaço mais quatro caracteres seguido de um espaço... (1234 1234 5678 5678)-->
             </label>
 
             <div class="data-group">
-                <label class="label1">EXP. DATE (MM/YY) <br>
+                <label class="label1">
+                    <div class="name">EXP. DATE (MM/YY)</div><!-- POR DENTRO DE UMA DIV E ARRUMAR O ESPAÇAMENTO DOS INSERTs -->
                     <input class="insert-month" oninput="adicionar3()" type="number" name="month" id="month" min="0" max="12" required placeholder="MM">
                     <input class="insert-year" oninput="adicionar3()" type="number" name="year" id="year" min="0" max="25" required placeholder="YY">
                 </label>
                 
-                <label class="label2">CVC <br>
+                <label class="label2">
+                    <div class="name">CVC</div>
                     <input class="insert-cvc" oninput="adicionar4()" type="text" name="cvc" id="cvc" maxlength="3" minlength="3" required placeholder="Ex: 123">
                 </label>
             </div>
 
-            <input type="submit" value="Confirm">
+            <input class="button" onsubmit="complete()" type="submit" value="Confirm">
         </form>
+        <div class="complete">
+            <img src="images/icon-complete.svg" alt="">
+            <div class="complete-text1">THANK YOU!</div>
+            <div class="complete-text2">We've added your card details</div>
+            <button class="button">Continue</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

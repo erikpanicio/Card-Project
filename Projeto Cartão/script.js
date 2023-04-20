@@ -5,19 +5,6 @@ function adicionar1() {
     div_cardname.innerHTML = insert_cardname
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 var divCardnumber = document.querySelector(".cardnumber")
 
 function adicionar2() {
@@ -64,4 +51,15 @@ var div_cvc = document.querySelector(".cvc")
 function adicionar4() {
     var insert_cvc = document.querySelector("input.insert-cvc").value
     div_cvc.innerHTML = insert_cvc
+}
+
+/* Concluído */
+
+function complete() {
+    var form = document.querySelector("form")
+    form.style.display = "none !important"
+
+    var complete = document.querySelector(".complete")
+    complete.style.display = "flex"
+
 }
