@@ -19,10 +19,6 @@ function adicionar2() {
     divCardnumber.innerHTML = inputCardnumberValue
 }
 
-/* ele volta automático para o valor padrão mas a lista está atualizando para mostrar naada já que nela não tem nada */
-
-
-
 /* Date */
 
 var div_date = document.querySelector(".date")
@@ -43,7 +39,7 @@ function adicionar3() {
 
 var ano_limite = ((new Date().getFullYear()) + 5) - 2000
 var insert_year = document.querySelector("input.insert-year")
-insert_year.max = ano_limite
+insert_year.max = ano_limite /* definindo o max do input como o ano atual mais 5 */
 
 
 var div_cvc = document.querySelector(".cvc")
@@ -57,9 +53,10 @@ function adicionar4() {
 
 function complete() {
     var form = document.querySelector("form")
-    form.style.display = "none !important"
+    form.style.display = "none"
 
-    var complete = document.querySelector(".complete")
-    complete.style.display = "flex"
-
+    var divComplete = document.querySelector(".complete")
+    divComplete.style.display = "flex"
 }
+
+/* se já tiver um valor padrão não mostra no cartão, arrumar isso diminuindo os adicionar() */

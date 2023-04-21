@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="right-side">
-        <form action="" method="GET">
+        <form action="#" method="" onsubmit="complete()"> <!-- mandar para um js -->
             <label>
                 <div class="name">CARDHOLDER NAME</div>
                 <input class="insert-cardname" oninput="adicionar1()" type="text" name="name" id="name" minlength="3" maxlength="30" pattern="[a-zA-Z ]*" required placeholder="Ex: Jane Appleseed"> <!-- o pattern possibilita a entrada de dados de a-z A-Z e espaços, o * possibilita escrever quantos caracteres quiser -->
@@ -47,7 +47,7 @@
                 </label>
             </div>
 
-            <input class="button" onsubmit="complete()" type="submit" value="Confirm">
+            <input class="button" type="submit" value="Confirm">
         </form>
         <div class="complete">
             <img src="images/icon-complete.svg" alt="">
