@@ -59,4 +59,15 @@ function complete() {
     divComplete.style.display = "flex"
 }
 
+function datas() {
+    var nome = document.getElementById("name").value
+    var number = document.getElementById("number").value
+    var month = document.getElementById("month").value
+    var year = document.getElementById("year").value
+    var cvc = document.getElementById("cvc").value
+
+    alert(`Dados armazenados: \n \nNome:${nome} \nNúmero do Cartão:${number} \nMês de Vencimento:${month} \nAno de Vencimento:${year} \nCVC: ${cvc}`)
+}
+
 /* se já tiver um valor padrão não mostra no cartão, arrumar isso diminuindo os adicionar() */
+/* melhorar os nome das coisas: Variáveis, funções... */

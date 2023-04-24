@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="right-side">
-        <form action="script.php" method="POST" onsubmit="complete()" target="_blank"> <!-- tirar blank e enviar os dados sem recarregar a página -->
+        <form method="POST" onsubmit="complete(); datas(); return false"><!-- return false para não recarregar a página quando os dados forem enviados -->
             <label>
                 <div class="name">CARDHOLDER NAME</div>
                 <input class="insert-cardname" oninput="adicionar1()" type="text" name="name" id="name" minlength="3" maxlength="30" pattern="[a-zA-Z ]*" required placeholder="Ex: Jane Appleseed"> <!-- o pattern possibilita a entrada de dados de a-z A-Z e espaços, o * possibilita escrever quantos caracteres quiser -->
