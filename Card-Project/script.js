@@ -66,7 +66,7 @@ function datas() {
     var year = document.getElementById("year").value
     var cvc = document.getElementById("cvc").value
 
-    alert(`Dados armazenados: \n \nNome:${nome} \nNúmero do Cartão:${number} \nMês de Vencimento:${month} \nAno de Vencimento:${year} \nCVC: ${cvc}`)
+    alert(`Dados armazenados: \n \nNome: ${nome} \nNúmero do Cartão: ${number} \nMês de Vencimento: ${month} \nAno de Vencimento: ${year} \nCVC: ${cvc}`)
 }
 
 /* se já tiver um valor padrão não mostra no cartão, arrumar isso diminuindo os adicionar() */
